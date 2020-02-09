@@ -181,6 +181,8 @@ img {
       padding: 0; }
     .footer .wrap_header .navbar-toggler-icon {
       color: #ffffff; }
+  .footer .navbar-expand-lg {
+    flex-flow: column; }
   .footer .nav-link.header {
     color: #ffffff;
     font-weight: regular;
