@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
 
     <title>Hello, world!</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div class="popup-fade">
+        <div class="popup">
+            <p><span>Спасибо за заявку!</span></p>
+            <a class="popup-close" href="#">
+                <i class="fas fa-times"></i>
+            </a>
+            <p>Спасибо за Вашу заявку. Наш менеджер свяжется с Вами в ближайшее время!</p>
+        </div>
+    </div>
     <header class="header">
         <div class="header_top">
             <div class="container-fluid">
@@ -112,36 +123,40 @@
                             </div>
                             <div class="col-lg-4 text-center">
                                 <h3>Фактура</h3>
-                                <div class="item_calc">
-                                    <label for="factura" class="factura">
+                                <div id="group1">
+                                    <div class="item_calc">
+                                        <label for="factura" class="factura">
                                          глянцевая
                                     </label>
-                                    <input type="radio" name="factura" class="input_radio" value="Глянцевая" checked>
-                                </div>
-                                <div class="item_calc">
-                                    <label for="factura" class="factura">
+                                        <input type="checkbox" name="factura" class="input_radio" value="Глянцевая" checked>
+                                    </div>
+                                    <div class="item_calc">
+                                        <label for="factura" class="factura">
                                          матовая
                                     </label>
-                                    <input type="radio" name="factura" class="input_radio" value="Матовая">
+                                        <input type="checkbox" name="factura" class="input_radio" value="Матовая">
+                                    </div>
                                 </div>
                                 <h3>Цвет</h3>
-                                <div class="item_calc">
-                                    <label for="color" class="factura">
+                                <div id="group2">
+                                    <div class="item_calc">
+                                        <label for="color" class="factura">
                                          Синий
                                     </label>
-                                    <input type="radio" name="color" class="input_radio" value="Синий" checked>
-                                </div>
-                                <div class="item_calc">
-                                    <label for="color" class="factura">
+                                        <input type="checkbox" name="color" class="input_radio" value="Синий" checked>
+                                    </div>
+                                    <div class="item_calc">
+                                        <label for="color" class="factura">
                                          Красный
                                     </label>
-                                    <input type="radio" name="color" class="input_radio" value="Красный">
-                                </div>
-                                <div class="item_calc">
-                                    <label for="color" class="factura">
+                                        <input type="checkbox" name="color" class="input_radio" value="Красный">
+                                    </div>
+                                    <div class="item_calc">
+                                        <label for="color" class="factura">
                                          Зеленый
                                     </label>
-                                    <input type="radio" name="color" class="input_radio" value="Зеленый">
+                                        <input type="checkbox" name="color" class="input_radio" value="Зеленый">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +168,7 @@
                         <div class="calc_price" id="total_price">
                             5659 рублей
                         </div>
-                        <form action="#" id="form">
+                        <form action="" id="form">
                             <label for="town">Город доставки</label>
                             <select name="town" id="town">
                             <option selected disabled>Выберите город</option>
@@ -164,10 +179,12 @@
                             <option >Сочи</option>
                         </select>
                             <label for="birthday">Дата рождения</label>
-                            <input type="date" name="birthday" id="birthday">
+                            <input type="text" name="birthday" id="datepicker">
                             <label for="telephone">Телефон</label>
-                            <input type="text" name="telephone" id="telephone" value="+7(___)___-__-__">
-                            <input type="submit" name="submit" id="submit" value="Оставить заявку">
+                            <input type="text" name="telephone" id="telephone" value="">
+                            <input type="button" name="submit" id="submit" value="Оставить заявку">
+
+                            <label class="personal_data" for="personal_data"><input type="checkbox" name="personal_data" id="personal_data" class="personal_data" checked>Я согласен на обработку персональных данных</label>
                         </form>
                     </div>
                 </div>
@@ -335,10 +352,16 @@
     <!-- /.footer -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/275134a326.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/files.js"></script>
 </body>
 
 </html>

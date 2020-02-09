@@ -1,3 +1,126 @@
+.nice-select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  height: 42px;
+  line-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+  width: auto; }
+  .nice-select:hover {
+    border-color: #dbdbdb; }
+  .nice-select:active, .nice-select.open, .nice-select:focus {
+    border-color: #999; }
+  .nice-select:after {
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+    content: '';
+    display: block;
+    height: 5px;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    transition: all 0.15s ease-in-out;
+    width: 5px; }
+  .nice-select.open:after {
+    transform: rotate(-135deg); }
+  .nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0); }
+  .nice-select.disabled {
+    border-color: #ededed;
+    color: #999;
+    pointer-events: none; }
+    .nice-select.disabled:after {
+      border-color: #cccccc; }
+  .nice-select.wide {
+    width: 100%; }
+    .nice-select.wide .list {
+      left: 0 !important;
+      right: 0 !important; }
+  .nice-select.right {
+    float: right; }
+    .nice-select.right .list {
+      left: auto;
+      right: 0; }
+  .nice-select.small {
+    font-size: 12px;
+    height: 36px;
+    line-height: 34px; }
+    .nice-select.small:after {
+      height: 4px;
+      width: 4px; }
+    .nice-select.small .option {
+      line-height: 34px;
+      min-height: 34px; }
+  .nice-select .list {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scale(0.75) translateY(-21px);
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    z-index: 9; }
+    .nice-select .list:hover .option:not(:hover) {
+      background-color: transparent !important; }
+  .nice-select .option {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 40px;
+    list-style: none;
+    min-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 29px;
+    text-align: left;
+    transition: all 0.2s; }
+    .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+      background-color: #f6f6f6; }
+    .nice-select .option.selected {
+      font-weight: bold; }
+    .nice-select .option.disabled {
+      background-color: transparent;
+      color: #999;
+      cursor: default; }
+
+.no-csspointerevents .nice-select .list {
+  display: none; }
+
+.no-csspointerevents .nice-select.open .list {
+  display: block; }
+
 body {
   min-width: 320px;
   max-width: 1920px;
@@ -6,10 +129,65 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  line-height: 30px; }
+  line-height: 30px;
+  padding-top: 1em; }
 
 img {
   max-width: 100%; }
+
+.hint {
+  position: absolute;
+  z-index: 100;
+  background-color: #005FA3;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  line-height: 100%;
+  padding: 1em 1em;
+  border: 2px solid #ff5555;
+  cursor: pointer; }
+
+.popup-fade {
+  display: none; }
+
+.popup-fade:before {
+  content: '';
+  background: #005FA3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 9999; }
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  padding: 20px;
+  width: 500px;
+  height: 250px;
+  margin-left: -200px;
+  background: #fff;
+  z-index: 99999;
+  opacity: 1;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center; }
+
+.popup > p > span {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 45px;
+  color: #005FA3; }
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
 
 .header .container {
   margin-right: 0; }
@@ -113,18 +291,24 @@ img {
     line-height: 30px;
     letter-spacing: 0.05em;
     margin-bottom: 0;
-    vertical-align: end; }
+    vertical-align: end;
+    padding-left: 10px; }
   .content .calc_left input:last-child {
     margin-top: 20px; }
-  .content #form select,
+  .content #form .nice-select,
   .content #form input {
     color: #005FA3;
-    height: 40px; }
-  .content #form select,
+    height: 40px;
+    font-size: 18px; }
+  .content #form .nice-select,
   .content #form input,
   .content #form label {
     width: 94%;
-    padding-left: 0px; }
+    padding-left: 10px; }
+  .content #form .nice-select {
+    border-radius: 0; }
+  .content #form .nice-select .list {
+    width: 100%; }
   .content .calc_price {
     font-weight: bold;
     font-size: 36px;
@@ -132,13 +316,32 @@ img {
     letter-spacing: 0.05em; }
   .content .calc-left label {
     display: block; }
+  .content #form input.personal_data {
+    height: 20px;
+    width: 20px;
+    margin-top: 0;
+    vertical-align: middle;
+    margin-right: 20px; }
+  .content #form label.personal_data {
+    display: inline-table;
+    font-size: 13px;
+    letter-spacing: normal;
+    height: 20px;
+    margin-top: 20px; }
   .content .calc_left #submit {
+    background-color: #ffffff;
     height: 50px;
     font-weight: bold;
     font-size: 25px;
     line-height: 41px;
     letter-spacing: 0.05em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    transition: all .3s;
+    margin-top: 20px; }
+  .content .calc_left #submit:hover {
+    background-color: #005FA3;
+    color: #ffffff; }
   .content .calc_right h2 {
     font-weight: bold;
     font-size: 36px;
@@ -166,7 +369,9 @@ img {
     width: 50%; }
   .content .input_calc {
     text-align: center;
-    width: 50px; }
+    vertical-align: middle;
+    width: 50px;
+    height: 36px; }
   .content label.factura {
     width: 100px;
     margin-right: 10px; }
@@ -253,11 +458,13 @@ img {
   .content .calc_right h3,
   .content .label_calc,
   .content .item_calc {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .content .calc_left #submit {
+    font-size: 20px; } }
 
 @media only screen and (max-width: 992px) {
   .header .navbar-nav li a {
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 1.75px;
     margin-right: 1.75px; }
   .content .calc_left h2,
@@ -270,13 +477,20 @@ img {
     margin-top: 70px; } }
 
 @media only screen and (max-width: 767px) {
+  .popup {
+    width: 300px;
+    height: 250px;
+    margin-left: -150px;
+    font-size: 18px;
+    line-height: 20px; }
   .header .header_top .container-fluid .row {
     height: 20px;
     border-bottom: none;
     box-shadow: none; }
   .header .header_top img {
     width: 80px;
-    margin-top: 0; }
+    position: -ms-page;
+    left: 50%; }
   .header .btn {
     margin-top: 10px; }
   .header .btn .fas {
@@ -305,7 +519,6 @@ img {
     transform: scaleX(1); }
   .content {
     left: 0;
-    text-align: center;
     max-width: 767px; }
   .footer .adress,
   .footer .wrapUkon {

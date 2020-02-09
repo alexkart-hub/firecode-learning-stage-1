@@ -8,7 +8,7 @@ var browerSync = require('browser-sync').create();
 
 var config = {
     paths: {
-        scss: './scss/**/*.scss',
+        scss: './scss/*.scss',
         html: './index.html'
     },
     output: {
