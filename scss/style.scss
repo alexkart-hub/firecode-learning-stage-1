@@ -1,0 +1,27 @@
+@import 'scss/nice-select.scss';
+//---- Переменные-----------
+$padding_header:17px;
+$ml_nav_item:35px;
+$main_color:#005FA3;
+// -------------------------
+body {
+    min-width: 320px;
+    max-width: 1920px;
+    background-color: #fff;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+img {
+    max-width: 100%;
+    // height: auto;
+}
+
+@import 'scss/hint.scss';
+@import 'scss/popup.scss';
+@import 'scss/header.scss';
+@import 'scss/content.scss';
+@import 'scss/footer.scss';

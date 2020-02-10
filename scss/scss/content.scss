@@ -1,0 +1,171 @@
+.content {
+    position: relative;
+    min-width: 320px;
+    margin-top: 50px;
+    height: auto;
+    .calc_left {
+        background-color: $main_color;
+        padding: 30px 20px 30px 10%;
+        color: #ffffff;
+    }
+    .calc_left label {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        margin-bottom: 0;
+        vertical-align: end;
+        padding-left: 10px;
+    }
+    .calc_left input:last-child {
+        margin-top: 20px;
+    }
+    #form .nice-select,
+    #form input {
+        color: $main_color;
+        height: 40px;
+        font-size: 18px;
+    }
+    #form .nice-select,
+    #form input,
+    #form label {
+        width: 94%;
+        padding-left: 10px;
+    }
+    #form .nice-select {
+        border-radius: 0;
+    }
+    #form .nice-select .list {
+        width: 100%;
+    }
+    .calc_price {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 59px;
+        letter-spacing: 0.05em;
+    }
+    .calc-left label {
+        display: block;
+    }
+    #form input.personal_data {
+        height: 20px;
+        width: 20px;
+        margin-top: 0;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+    #form label.personal_data {
+        display: inline-table;
+        font-size: 13px;
+        letter-spacing: normal;
+        height: 20px;
+        margin-top: 20px;
+    }
+    .calc_left #submit {
+        background-color: #ffffff;
+        height: 50px;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 41px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border: 2px solid #fff;
+        transition: all .3s;
+        margin-top: 20px;
+    }
+    .calc_left #submit:hover {
+        background-color: $main_color;
+        color: #ffffff;
+    }
+    .calc_right h2 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 59px;
+        letter-spacing: 0.05em;
+        color: $main_color;
+    }
+    .calc_right h3 {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .calc_right {
+        background-color: #fff;
+        padding: 20px 0 20px 20px;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+    }
+    >.container {
+        border: 1px solid $main_color;
+        box-shadow: -4px -4px 40px rgba(0, 95, 163, 0.25), 4px 4px 40px rgba(0, 95, 163, 0.25);
+        margin-bottom: 50px;
+    }
+    .label_calc {
+        width: 50%;
+    }
+    .input_calc {
+        text-align: center;
+        vertical-align: middle;
+        width: 50px;
+        height: 36px;
+    }
+    label.factura {
+        width: 100px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .content {
+        .calc_left h2,
+        .calc_right h2 {
+            font-size: 28px;
+            letter-spacing: 0em;
+        }
+        .calc_left h3,
+        .calc_right h3,
+        .label_calc,
+        .item_calc {
+            font-size: 15px;
+        }
+        .calc_left #submit {
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .content {
+        .calc_left h2,
+        .calc_right h2 {
+            font-size: 24px;
+            letter-spacing: 0em;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .content {
+        left: 0;
+        max-width: 767px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .content {
+        .calc_left #submit,
+        .calc_left input {
+            font-size: 100%;
+        }
+        .item_calc .label_calc,
+        .item_calc .input_calc {
+            display: block;
+            margin: 5px auto;
+            padding: 0;
+        }
+    }
+}

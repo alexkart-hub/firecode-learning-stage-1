@@ -1,0 +1,13 @@
+.hint {
+    position: absolute;
+    z-index: 100;
+    background-color: $main_color;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    line-height: 100%;
+    padding: 1em 1em;
+    border: 2px solid #ff5555;
+    cursor: pointer;
+}

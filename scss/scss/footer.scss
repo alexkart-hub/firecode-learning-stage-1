@@ -1,0 +1,99 @@
+.footer {
+    padding-top: 20px;
+    background-color: $main_color;
+    color: #ffffff;
+    .wrap_header {
+        display: flex;
+        .navbar-toggler {
+            padding: 0;
+        }
+        .navbar-toggler-icon {
+            color: #ffffff;
+        }
+    }
+    .navbar-expand-lg {
+        flex-flow: column;
+    }
+    .nav-link.header {
+        color: #ffffff;
+        font-weight: regular;
+        font-size: 20px;
+        line-height: 23px;
+    }
+    .nav .nav-link {
+        color: #ffffff;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .row>div {
+        padding: 0;
+    }
+    .wrapUkon {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .ukon {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 25px;
+        text-transform: uppercase;
+        font-style: italic;
+        span {
+            font-size: 20px;
+            font-style: normal;
+        }
+    }
+    .siluet {
+        margin-left: 20px;
+        margin-bottom: 5px;
+    }
+    .adress p {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .adress>p:first-child {
+        margin-bottom: 5px;
+    }
+    .adress>p:last-child {
+        margin-bottom: 30px;
+    }
+    .footer_line {
+        height: 65px;
+        border-top: 2px solid #FFFFFF;
+        div:first-child {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+        }
+        div:last-child a {
+            color: #ffffff;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: right;
+            text-decoration-line: underline;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .footer {
+        a.nav-link.header {
+            font-size: 14px;
+        }
+        .adress {
+            margin-top: 70px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer {
+        .adress,
+        .wrapUkon {
+            margin: 10px auto;
+        }
+    }
+}
