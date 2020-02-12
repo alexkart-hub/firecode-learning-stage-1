@@ -257,7 +257,7 @@ label {
             font-weight: bold;
             font-size: 36px;
             line-height: 59px;
-            letter-spacing: 0.05em;
+            // letter-spacing: 0.05em;
             text-transform: uppercase;
             margin-bottom: 0;
         }
@@ -336,21 +336,6 @@ label {
             color: #ffffff;
         }
     }
-    .calc_right h2 {
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 59px;
-        letter-spacing: 0.05em;
-        color: $main_color;
-        margin-bottom: 30px;
-    }
-    .calc_right h3 {
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 30px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
     .calc_right {
         background-color: #fff;
         padding: 30px;
@@ -358,6 +343,26 @@ label {
         font-size: 18px;
         line-height: 30px;
         letter-spacing: 0.05em;
+        h2 {
+            font-weight: bold;
+            font-size: 35px;
+            line-height: 59px;
+            letter-spacing: 0.05em;
+            color: $main_color;
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .col-lg-5 {
+            #group1 {
+                margin-bottom: 30px;
+            }
+        }
         .item_calc {
             margin-bottom: 10px;
         }
@@ -368,24 +373,25 @@ label {
         margin-bottom: 50px;
     }
     .label_calc {
-        width: 50%;
+        width: 60%;
         margin-bottom: 0;
     }
     [id*="group"] {
         .item_calc {
             display: flex;
             label.factura {
-                text-align: end;
+                text-align: right;
             }
         }
     }
     .input_calc {
         text-align: center;
         vertical-align: middle;
-        width: 50px;
+        width: 64px;
         height: 36px;
         border: 1px solid $main_color;
         margin-left: 20px;
+        margin-right: 10px;
     }
     .input_radio {
         display: none;
@@ -433,15 +439,28 @@ label {
         .calc_left #submit {
             font-size: 20px;
         }
+        .input_calc {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
     }
 }
 
 @media only screen and (max-width: 992px) {
     .content {
+        .calc_right {
+            .row>div {
+                padding-left: 20%;
+            }
+        }
         .calc_left h2,
         .calc_right h2 {
             font-size: 24px;
             letter-spacing: 0em;
+            line-height: 29px;
+        }
+        label.factura {
+            margin-right: 25%;
         }
     }
 }
@@ -450,6 +469,9 @@ label {
     .content {
         left: 0;
         max-width: 767px;
+        label.factura {
+            margin-right: 20%;
+        }
     }
 }
 
@@ -465,6 +487,29 @@ label {
             margin: 5px auto;
             padding: 0;
         }
+        .item_calc.span {
+            margin-top: 10px;
+            span {
+                font-weight: bold;
+            }
+        }
+        [id*="group"] {
+            .item_calc {
+                display: block;
+                label.factura {
+                    text-align: center;
+                }
+            }
+        }
+        .calc_right {
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+            .row>div {
+                padding-left: 0;
+            }
+        }
     }
 }
 
@@ -477,6 +522,7 @@ label {
         // padding-left: 0;
     }
     .wrap_header {
+        width: 100%;
         .navbar-toggler {
             padding: 0;
         }
@@ -493,7 +539,7 @@ label {
         padding: 0.5rem 0rem;
     }
     .navbar-expand-lg {
-        flex-flow: column;
+        flex-flow: wrap;
         .navbar-collapse {
             align-items: flex-start;
         }
@@ -510,17 +556,17 @@ label {
         font-size: 14px;
         line-height: 25px;
     }
-    .nav li::after {
-        content: "";
-        display: block;
-        transform: scale(0);
-        height: 1px;
-        background-color: #fff;
+    .nav {
+        width: 100%;
+        li {
+            width: 100%;
+        }
+    }
+    .nav-link {
         transition: all .3s;
     }
-    .nav li:hover::after {
-        transform: scale(1);
-        width: 100%;
+    .nav-link:hover {
+        transform: scale(1.1);
     }
     .row>div {
         padding: 0;
