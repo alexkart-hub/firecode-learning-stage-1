@@ -31,7 +31,7 @@ gulp.task('sass', function() {
 
 gulp.task('code', function() {
     return gulp.src(config.paths.html)
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(browerSync.stream());
 });
 
 

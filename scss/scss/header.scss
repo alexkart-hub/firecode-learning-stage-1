@@ -52,6 +52,9 @@
         border: 2px solid #fff;
         color: $main_color;
         margin-top: 60px;
+        margin-left: 35px;
+        width: 282px;
+        height: 68px;
     }
     .btn:hover {
         background-color: $main_color;
@@ -91,7 +94,7 @@
 @media only screen and (max-width: 1200px) {
     .header {
         .header_top .container-fluid .row {
-            height: 130px;
+            // height: 130px;
         }
         .header_top img {
             width: 150px;

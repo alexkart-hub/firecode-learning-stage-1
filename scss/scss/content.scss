@@ -3,9 +3,12 @@
     min-width: 320px;
     margin-top: 50px;
     height: auto;
+    >.container {
+        margin-left: -10px;
+    }
     .calc_left {
         background-color: $main_color;
-        padding: 30px 20px 30px 10%;
+        padding: 30px 6%;
         color: #ffffff;
     }
     .calc_left label {
@@ -20,6 +23,9 @@
     .calc_left input:last-child {
         margin-top: 20px;
     }
+    #form {
+        display: table;
+    }
     #form .nice-select,
     #form input {
         color: $main_color;
@@ -29,7 +35,7 @@
     #form .nice-select,
     #form input,
     #form label {
-        width: 94%;
+        width: 100%;
         padding-left: 10px;
     }
     #form .nice-select {
@@ -48,18 +54,22 @@
         display: block;
     }
     #form input.personal_data {
-        height: 20px;
-        width: 20px;
-        margin-top: 0;
-        vertical-align: middle;
-        margin-right: 20px;
+        height: 10px;
+        width: 10px;
+        margin-top: 25px;
+        float: left;
+        padding-left: 0;
     }
     #form label.personal_data {
-        display: inline-table;
         font-size: 13px;
         letter-spacing: normal;
-        height: 20px;
-        margin-top: 20px;
+        float: left;
+        display: inline;
+        width: 95%;
+        padding-left: 10px;
+        line-height: 18px;
+        margin-left: 0px;
+        margin-top: 23px;
     }
     .calc_left #submit {
         background-color: #ffffff;
