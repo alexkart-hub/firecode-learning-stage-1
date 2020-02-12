@@ -174,7 +174,7 @@
                     <div class="calc_left">
                         <h2>Итоговая цена:</h2>
                         <div class="calc_price" id="total_price">
-                            5659 рублей
+                            <span>5659 рублей</span>
                         </div>
                         <form action="" id="form">
                             <label for="town">Город доставки</label>
@@ -187,7 +187,9 @@
                             <option >Сочи</option>
                         </select>
                             <label for="birthday">Дата рождения</label>
-                            <input type="text" name="birthday" id="datepicker">
+                            <div class="wrap_datepicker">
+                                <input type="text" name="birthday" id="datepicker"><i class="fas fa-calculator"></i></div>
+
                             <label for="telephone">Телефон</label>
                             <input type="text" name="telephone" id="telephone" value="">
                             <input type="button" name="submit" id="submit" value="Оставить заявку">

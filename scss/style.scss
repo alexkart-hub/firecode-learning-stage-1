@@ -239,6 +239,10 @@ label {
         .btn {
             // margin-top: 10px;
         }
+        .header_top,
+        .header_bottom {
+            box-shadow: none;
+        }
     }
 }
 
@@ -300,6 +304,24 @@ label {
             font-size: 36px;
             line-height: 59px;
             letter-spacing: 0.05em;
+            span {
+                border-bottom: 3px solid rgba(255, 255, 255, .3);
+            }
+        }
+        #form .wrap_datepicker {
+            position: relative;
+            #datepicker {
+                cursor: pointer;
+            }
+            .fas {
+                color: $main_color;
+                position: absolute;
+                top: 10px;
+                right: 5px;
+            }
+        }
+        #form #telephone {
+            cursor: pointer;
         }
         #form input.personal_data {
             height: 10px;
@@ -307,6 +329,7 @@ label {
             margin-top: 25px;
             float: left;
             padding-left: 0;
+            cursor: pointer;
         }
         #form label.personal_data {
             font-size: 13px;
@@ -318,6 +341,7 @@ label {
             line-height: 18px;
             margin-left: 0px;
             margin-top: 23px;
+            cursor: pointer;
         }
         #submit {
             background-color: #ffffff;
@@ -392,6 +416,7 @@ label {
         border: 1px solid $main_color;
         margin-left: 20px;
         margin-right: 10px;
+        cursor: pointer;
     }
     .input_radio {
         display: none;
@@ -399,6 +424,7 @@ label {
     label.factura {
         width: 100%;
         margin-right: 20%;
+        cursor: pointer;
     }
     .input_radio+label.factura::after {
         content: "";
@@ -477,6 +503,10 @@ label {
 
 @media only screen and (max-width: 576px) {
     .content {
+        margin-top: 0;
+        >.container {
+            box-shadow: none;
+        }
         .calc_left #submit,
         .calc_left input {
             font-size: 100%;

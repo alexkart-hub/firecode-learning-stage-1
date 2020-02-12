@@ -354,6 +354,11 @@ label {
     background-color: #0dc4ff;
     transform: scaleX(1); } }
 
+@media only screen and (max-width: 576px) {
+  .header .header_top,
+  .header .header_bottom {
+    box-shadow: none; } }
+
 .content {
   position: relative;
   min-width: 320px;
@@ -402,12 +407,26 @@ label {
       font-size: 36px;
       line-height: 59px;
       letter-spacing: 0.05em; }
+      .content .calc_left .calc_price span {
+        border-bottom: 3px solid rgba(255, 255, 255, 0.3); }
+    .content .calc_left #form .wrap_datepicker {
+      position: relative; }
+      .content .calc_left #form .wrap_datepicker #datepicker {
+        cursor: pointer; }
+      .content .calc_left #form .wrap_datepicker .fas {
+        color: #005FA3;
+        position: absolute;
+        top: 10px;
+        right: 5px; }
+    .content .calc_left #form #telephone {
+      cursor: pointer; }
     .content .calc_left #form input.personal_data {
       height: 10px;
       width: 10px;
       margin-top: 25px;
       float: left;
-      padding-left: 0; }
+      padding-left: 0;
+      cursor: pointer; }
     .content .calc_left #form label.personal_data {
       font-size: 13px;
       letter-spacing: normal;
@@ -417,7 +436,8 @@ label {
       padding-left: 10px;
       line-height: 18px;
       margin-left: 0px;
-      margin-top: 23px; }
+      margin-top: 23px;
+      cursor: pointer; }
     .content .calc_left #submit {
       background-color: #ffffff;
       height: 50px;
@@ -474,12 +494,14 @@ label {
     height: 36px;
     border: 1px solid #005FA3;
     margin-left: 20px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    cursor: pointer; }
   .content .input_radio {
     display: none; }
   .content label.factura {
     width: 100%;
-    margin-right: 20%; }
+    margin-right: 20%;
+    cursor: pointer; }
   .content .input_radio + label.factura::after {
     content: "";
     display: inline-block;
@@ -529,27 +551,31 @@ label {
       margin-right: 20%; } }
 
 @media only screen and (max-width: 576px) {
-  .content .calc_left #submit,
-  .content .calc_left input {
-    font-size: 100%; }
-  .content .item_calc .label_calc,
-  .content .item_calc .input_calc {
-    display: block;
-    margin: 5px auto;
-    padding: 0; }
-  .content .item_calc.span {
-    margin-top: 10px; }
-    .content .item_calc.span span {
-      font-weight: bold; }
-  .content [id*="group"] .item_calc {
-    display: block; }
-    .content [id*="group"] .item_calc label.factura {
-      text-align: center; }
-  .content .calc_right h3 {
-    margin-top: 20px;
-    margin-bottom: 0; }
-  .content .calc_right .row > div {
-    padding-left: 0; } }
+  .content {
+    margin-top: 0; }
+    .content > .container {
+      box-shadow: none; }
+    .content .calc_left #submit,
+    .content .calc_left input {
+      font-size: 100%; }
+    .content .item_calc .label_calc,
+    .content .item_calc .input_calc {
+      display: block;
+      margin: 5px auto;
+      padding: 0; }
+    .content .item_calc.span {
+      margin-top: 10px; }
+      .content .item_calc.span span {
+        font-weight: bold; }
+    .content [id*="group"] .item_calc {
+      display: block; }
+      .content [id*="group"] .item_calc label.factura {
+        text-align: center; }
+    .content .calc_right h3 {
+      margin-top: 20px;
+      margin-bottom: 0; }
+    .content .calc_right .row > div {
+      padding-left: 0; } }
 
 .footer {
   padding-top: 20px;
