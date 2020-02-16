@@ -7,7 +7,7 @@ $padding_footer_line:0;
 // -------------------------
 body {
     min-width: 320px;
-    max-width: 1920px;
+    // max-width: 1920px;
     background-color: #fff;
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -361,7 +361,6 @@ label {
         }
     }
     .calc_right {
-        background-color: #fff;
         padding: 30px;
         font-weight: normal;
         font-size: 18px;
