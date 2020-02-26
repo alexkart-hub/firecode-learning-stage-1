@@ -3,20 +3,31 @@
     background-color: $main_color;
     color: #ffffff;
     .wrap_header {
-        display: flex;
+        width: 100%;
         .navbar-toggler {
             padding: 0;
         }
         .navbar-toggler-icon {
             color: #ffffff;
         }
+        .nav-link {
+            padding: .5rem .5rem;
+            display: inline-flex;
+        }
+    }
+    .navbar {
+        align-items: flex-start;
+        padding: 0.5rem 0rem;
     }
     .navbar-expand-lg {
-        flex-flow: column;
+        flex-flow: wrap;
+        .navbar-collapse {
+            align-items: flex-start;
+        }
     }
     .nav-link.header {
         color: #ffffff;
-        font-weight: regular;
+        font-weight: bold;
         font-size: 20px;
         line-height: 23px;
     }
@@ -25,6 +36,18 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 25px;
+    }
+    .nav {
+        width: 100%;
+        li {
+            width: 100%;
+        }
+    }
+    .nav-link {
+        transition: all .3s;
+    }
+    .nav-link:hover {
+        transform: scale(1.1);
     }
     .row>div {
         padding: 0;
@@ -59,13 +82,19 @@
     .adress>p:last-child {
         margin-bottom: 30px;
     }
+    .line {
+        border-top: 2px solid #FFFFFF;
+    }
     .footer_line {
         height: 65px;
-        border-top: 2px solid #FFFFFF;
         div:first-child {
             font-weight: bold;
             font-size: 15px;
             line-height: 18px;
+            padding-right: $padding_footer_line;
+        }
+        div:last-child {
+            padding-left: $padding_footer_line;
         }
         div:last-child a {
             color: #ffffff;
@@ -91,6 +120,12 @@
 
 @media only screen and (max-width: 767px) {
     .footer {
+        .navbar {
+            padding: 0.5rem 1.5rem;
+            ul {
+                margin-left: 1rem;
+            }
+        }
         .adress,
         .wrapUkon {
             margin: 10px auto;

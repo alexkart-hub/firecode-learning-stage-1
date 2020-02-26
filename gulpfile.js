@@ -9,11 +9,13 @@ var browerSync = require('browser-sync').create();
 var config = {
     paths: {
         scss: './scss/*.scss',
-        html: './index.html'
+        scss_all: './scss/**/*.scss',
+        html: './MyApp/index.php',
+        html_all: './MyApp/**/*.html'
     },
     output: {
         cssName: 'style.css',
-        path: './css'
+        path: './MyApp/css'
     }
 };
 
@@ -42,7 +44,7 @@ gulp.task('serve', function() {
         }
     });
 
-    gulp.watch(config.paths.scss, gulp.parallel('sass'));
+    gulp.watch(config.paths.scss_all, gulp.parallel('sass'));
     gulp.watch(config.paths.html, gulp.parallel('code'));
 });
 

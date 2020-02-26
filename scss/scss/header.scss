@@ -1,29 +1,36 @@
 .header {
+    font-weight: bold;
     .container {
-        margin-right: 0;
+        margin: 0 auto;
     }
-    .header_top .container-fluid .row {
-        height: 172px;
+    .header_top {
         border-bottom: 1px solid $main_color;
         box-shadow: 0px 4px 4px rgba(13, 196, 255, 0.25);
     }
     .header_logo {
         padding-top: $padding_header;
         padding-bottom: $padding_header;
+        z-index: 1;
+    }
+    .header_logo::after {
+        content: "";
+        position: absolute;
+        width: 2000px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: -1;
     }
     [class*="header_top_adress"],
     [class^="header_top_phone"] {
         position: relative;
-        padding-left: 25px;
         color: #ffffff;
     }
     [class*="header_top_adress"]:before,
     [class*="header_top_phone"]:before {
-        position: absolute;
-        width: 20px;
-        left: 5px;
-        top: 0px;
         font-family: FontAwesome;
+        margin-right: 5px;
     }
     .header_top_adress_first:before {
         content: "\f3c5";
@@ -44,17 +51,27 @@
         background-color: $main_color;
     }
     .btn .fas {
-        margin-right: 10px;
+        margin-right: 5px;
+    }
+    .wrap_btn {
+        position: relative;
     }
     .btn {
         background-color: #ffffff;
         border-radius: 0;
         border: 2px solid #fff;
         color: $main_color;
-        margin-top: 60px;
-        margin-left: 35px;
-        width: 282px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 0px;
+        width: 95%;
         height: 68px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 52px;
+        letter-spacing: 0.05em;
+        position: absolute;
+        top: 30%;
     }
     .btn:hover {
         background-color: $main_color;
@@ -65,7 +82,7 @@
         box-shadow: 0px 4px 4px rgba(13, 196, 255, 0.25);
     }
     .navbar {
-        padding: 0 1rem;
+        padding: 0;
         z-index: 100;
     }
     .navbar-nav li a {
@@ -93,19 +110,25 @@
 
 @media only screen and (max-width: 1200px) {
     .header {
-        .header_top .container-fluid .row {
-            // height: 130px;
-        }
         .header_top img {
-            width: 150px;
+            max-height: 110px;
         }
         .header_top .row>div {
-            font-size: 15px;
+            font-size: 14px;
         }
         .navbar-nav li a {
             font-size: 16px;
-            margin-left: $ml_nav_item * .2;
-            margin-right: $ml_nav_item * .2;
+            margin-left: $ml_nav_item * .35;
+            margin-right: $ml_nav_item * .35;
+        }
+        .btn {
+            margin-left: 0px;
+            width: 95%;
+            height: 50px;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 34px;
+            letter-spacing: 0.05em;
         }
     }
 }
@@ -120,23 +143,33 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .header {
-        .header_top .container-fluid .row {
-            height: 20px;
+        .bg-blue {
+            background-color: #fff;
+        }
+        .header_top {
+            height: 40px;
             border-bottom: none;
             box-shadow: none;
         }
         .header_top img {
             width: 80px;
-            position: -ms-page;
+            // position: -ms-page;
             left: 50%;
         }
+        .header_logo::after {
+            height: 0;
+        }
         .btn {
-            margin-top: 10px;
+            margin-top: -15px;
         }
         .btn .fas {
             margin-right: 5px;
+        }
+        .navbar-toggler {
+            margin-top: -25px;
+            margin-bottom: 15px;
         }
         .navbar {
             width: 85%;
@@ -171,8 +204,9 @@
 
 @media only screen and (max-width: 576px) {
     .header {
-        .btn {
-            margin-top: 10px;
+        .header_top,
+        .header_bottom {
+            box-shadow: none;
         }
     }
 }
