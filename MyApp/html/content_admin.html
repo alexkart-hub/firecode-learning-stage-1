@@ -1,39 +1,39 @@
-<section class="users">
+<section class="users my-5">
     <div class="container">
         <h1>Пользователи</h1>
         <div class="row tab_header">
-            <div class="col-1 text-center tab">
+            <div class="col-md-1 col-sm-2 col-1 text-center tab">
                 ID
             </div>
             <div class="col tab">
                 Логин пользователя
             </div>
-            <div class="col-2 text-center tab">
+            <div class="col-lg-2 col-3 text-center tab">
                 Действие
             </div>
         </div>
         <div class="row tab_row">
-            <div class="col-1 text-center tab">
+            <div class="col-md-1 col-sm-2 col-1 text-center tab">
                 1
             </div>
             <div class="col tab">
                 maxis
             </div>
-            <div class="col-2 text-center tab">
-                <i class="fas fa-edit fa-2x"></i>
-                <i class="fas fa-times fa-2x"></i>
+            <div class="col-lg-2 col-3 text-center tab">
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-times"></i>
             </div>
         </div>
         <div class="row tab_row tab_row_2">
-            <div class="col-1 text-center tab">
+            <div class="col-md-1 col-sm-2 col-1 text-center tab">
                 2
             </div>
             <div class="col tab">
                 kayus bonus
             </div>
-            <div class="col-2 text-center tab">
-                <i class="fas fa-edit fa-2x"></i>
-                <i class="fas fa-times fa-2x"></i>
+            <div class="col-lg-2 col-3 text-center tab">
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-times"></i>
             </div>
         </div>
     </div>
@@ -42,46 +42,46 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm new_user_form">
                 <label for="">Логин</label>
-                <input type="text">
+                <input type="text" placeholder="Логин пользователя">
                 <label for="">Пароль</label>
-                <input type="text">
-                <input type="button" value="Добавить нового пользователя">
+                <input type="text" placeholder="Пароль пользователя">
+                <input type="button" value="Добавить пользователя">
             </div>
         </div>
     </div>
 </section>
-<section class="calculator_setting mb-5">
+<section class="calculator_setting my-5">
     <div class="container new_user_form">
         <h1>Настройки калькулятора</h1>
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm">
-                <label for="">Цена за кв.м потолка</label>
-                <input type="text">
-                <label for="">Цена за светильник</label>
-                <input type="text">
-                <label for="">Цена за угол</label>
-                <input type="text">
+            <div class="col-lg-4 col-md-6">
+                <label for="">Цена за кв.м потолка:</label>
+                <input type="text" value="270">
+                <label for="">Цена за светильник:</label>
+                <input type="text" value="170">
+                <label for="">Цена за угол:</label>
+                <input type="text" value="120">
             </div>
-            <div class="col-8">
-                <div class="container">
+            <div class="col-lg-8 col-md-6">
+                <div class="container px-0">
                     <div class="row">
-                        <div class="col-6">
-                            <label for="">Цена за глянцевую фактуру</label>
-                            <input type="text">
+                        <div class="col-lg-6">
+                            <label for="">Цена за глянцевую фактуру:</label>
+                            <input type="text" value="25">
                         </div>
-                        <div class="col-6">
-                            <label for="">Цена за матовую фактуру</label>
-                            <input type="text">
+                        <div class="col-lg-6">
+                            <label for="">Цена за матовую фактуру:</label>
+                            <input type="text" value="21">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
-                            <label for="">Цена за кв.м потолка</label>
-                            <input type="text">
+                        <div class="col-lg-6">
+                            <label for="">Цена за люстру:</label>
+                            <input type="text" value="225">
                         </div>
-                        <div class="col-6">
-                            <label for="">Цена за светильник</label>
-                            <input type="text">
+                        <div class="col-lg-6">
+                            <label for="">Цена за трубу:</label>
+                            <input type="text" value="150">
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6">
                 <label for="">Варианты цветов</label>
                 <ul>
                     <li>Белый <i class="fas fa-times"></i></li>
@@ -97,7 +97,7 @@
                     <li>Желтый <i class="fas fa-times"></i></li>
                     <li>Зеленый <i class="fas fa-times"></i></li>
                 </ul>
-                <p>Добавить новый цвет <i class="fas fa-plus"></i></p>
+                <p class="add_new_color">Добавить новый цвет <i class="fas fa-plus"></i></p>
                 <input type="button" value="Сохранить изменения">
             </div>
         </div>
@@ -105,7 +105,8 @@
 </section>
 <section class="orders mb-5">
     <div class="container">
-        <div class="row tab_header">
+        <h1 class="mb-3">Заявки</h1>
+        <div class="row tab_header ">
             <div class="col-xl-5 col-lg-3 col-md-5 col-10 order-1">
                 <div class="row text-center">
                     <div class="col-xl-1 col-2 tab px-0">ID</div>

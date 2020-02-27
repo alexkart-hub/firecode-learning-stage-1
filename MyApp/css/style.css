@@ -648,8 +648,19 @@ label {
 h1 {
   color: #005FA3; }
 
+h2 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 43px;
+  letter-spacing: 0.05em;
+  margin-top: 50px; }
+
 .fa-times {
   color: #ea0000; }
+
+.tab_header,
+.tab_row {
+  margin-left: 0; }
 
 .tab_header .tab {
   min-height: 40px;
@@ -679,6 +690,9 @@ h1 {
   display: none;
   content: none; }
 
+.tab_row .fas {
+  font-size: 24px; }
+
 .tab_row_2 .tab {
   background-color: #e1f8ff; }
 
@@ -696,19 +710,114 @@ h1 {
   .users .tab_row .col-2 .fa-times {
     padding-left: 4px; }
 
-.users h2 {
-  margin-top: 50px; }
-
 .new_user_form label,
 .new_user_form input {
   display: block;
   width: 100%; }
+
+.new_user_form label {
+  font-size: 22px;
+  line-height: 36px;
+  letter-spacing: 0.05em;
+  margin-top: 40px; }
+
+.new_user_form input {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #005FA3;
+  height: 50px;
+  padding-left: 15px;
+  border: 2px solid #005FA3; }
+
+.new_user_form input[type*=button] {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-top: 50px;
+  background-color: #fff;
+  transition: all .3s; }
+
+.new_user_form input[type*=button]:hover {
+  color: #fff;
+  background-color: #005FA3; }
+
+.calculator_setting ul {
+  padding-left: 0;
+  margin-top: 15px; }
+
+.calculator_setting li {
+  list-style: none;
+  font-size: 22px;
+  line-height: 26px;
+  color: #005FA3; }
+
+.calculator_setting .fa-times {
+  padding-left: 15px; }
+
+.calculator_setting .fa-plus {
+  color: #039f00; }
+
+.calculator_setting .add_new_color {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #005FA3;
+  margin-top: 15px; }
 
 .orders .row {
   height: 100%; }
 
 .orders div.order-3 .row {
   height: 100%; }
+
+.orders ul {
+  padding-left: 10px; }
+
+.orders li {
+  list-style: none; }
+
+@media only screen and (max-width: 1200px) {
+  .new_user_form label {
+    font-size: 18px; }
+  .new_user_form input[type*=button] {
+    font-size: 20px; } }
+
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 30px; }
+  h2 {
+    font-size: 22px;
+    line-height: 24px; } }
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 28px; }
+  h2 {
+    font-size: 18px; }
+  .tab_header .tab {
+    font-size: 14px; } }
+
+@media only screen and (max-width: 576px) {
+  .tab_header .tab {
+    font-size: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center; }
+  .tab_header > div:last-child {
+    letter-spacing: -.1em; }
+  .users .tab_row .tab {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center; }
+    .users .tab_row .tab .fas {
+      font-size: 16px; }
+    .users .tab_row .tab .fa-edit {
+      padding-right: 10px; }
+    .users .tab_row .tab .fa-times {
+      padding-left: 10px; } }
 
 .footer {
   padding-top: 20px;

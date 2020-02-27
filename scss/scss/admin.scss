@@ -2,8 +2,21 @@ h1 {
     color: $main_color;
 }
 
+h2 {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 43px;
+    letter-spacing: 0.05em;
+    margin-top: 50px;
+}
+
 .fa-times {
     color: #ea0000;
+}
+
+.tab_header,
+.tab_row {
+    margin-left: 0;
 }
 
 .tab_header {
@@ -38,6 +51,9 @@ h1 {
         display: none;
         content: none;
     }
+    .fas {
+        font-size: 24px;
+    }
 }
 
 .tab_row_2 {
@@ -65,9 +81,6 @@ h1 {
             }
         }
     }
-    h2 {
-        margin-top: 50px;
-    }
 }
 
 .new_user_form {
@@ -76,9 +89,62 @@ h1 {
         display: block;
         width: 100%;
     }
+    label {
+        font-size: 22px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        margin-top: 40px;
+    }
+    input {
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 23px;
+        color: $main-color;
+        height: 50px;
+        padding-left: 15px;
+        border: 2px solid $main-color;
+    }
+    input[type*=button] {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 41px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        margin-top: 50px;
+        background-color: #fff;
+        transition: all .3s;
+    }
+    input[type*=button]:hover {
+        color: #fff;
+        background-color: $main-color;
+    }
 }
 
-.calculator_setting {}
+.calculator_setting {
+    ul {
+        padding-left: 0;
+        margin-top: 15px;
+    }
+    li {
+        list-style: none;
+        font-size: 22px;
+        line-height: 26px;
+        color: $main-color;
+    }
+    .fa-times {
+        padding-left: 15px;
+    }
+    .fa-plus {
+        color: #039f00;
+    }
+    .add_new_color {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        color: $main-color;
+        margin-top: 15px;
+    }
+}
 
 .orders {
     .row {
@@ -86,5 +152,78 @@ h1 {
     }
     div.order-3 .row {
         height: 100%;
+    }
+    ul {
+        padding-left: 10px;
+    }
+    li {
+        list-style: none;
+    }
+}
+
+@media only screen and(max-width: 1200px) {
+    .new_user_form {
+        label {
+            font-size: 18px;
+        }
+        input[type*=button] {
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and(max-width: 992px) {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 22px;
+        line-height: 24px;
+    }
+}
+
+@media only screen and(max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .tab_header {
+        .tab {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and(max-width: 576px) {
+    .tab_header {
+        .tab {
+            font-size: 12px;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+        }
+        >div:last-child {
+            letter-spacing: -.1em;
+        }
+    }
+    .users {
+        .tab_row {
+            .tab {
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+                .fas {
+                    font-size: 16px;
+                }
+                .fa-edit {
+                    padding-right: 10px;
+                }
+                .fa-times {
+                    padding-left: 10px;
+                }
+            }
+        }
     }
 }
